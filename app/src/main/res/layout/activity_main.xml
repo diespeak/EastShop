@@ -1,17 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.administrator.yitao.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    tools:context="com.example.administrator.yitao.activity.MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:background="@color/colorPrimary"
+        android:id="@+id/dl_tool"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        >
+        <TextView
+            android:id="@+id/change_title"
+            android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:text="市场"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+       <android.support.v4.view.ViewPager
+           android:id="@+id/dtmain"
+           android:layout_weight="1"
+           android:layout_width="match_parent"
+           android:layout_height="0dp">
+
+       </android.support.v4.view.ViewPager>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            >
+            <LinearLayout
+                android:id="@+id/main_shop"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_market"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="市场"
+                        android:textColor="#aca7a7"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/main_news"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_chat"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="消息"
+                        android:textColor="#aca7a7"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/main_phonenumpeople"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:background="@drawable/selector_people_one"
+                    android:id="@+id/imageView" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="通信录"
+                        android:textColor="#aca7a7"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/main_my"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:background="@drawable/selector_my"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的"
+                        android:textColor="#aca7a7"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </RelativeLayout>
+</LinearLayout>
